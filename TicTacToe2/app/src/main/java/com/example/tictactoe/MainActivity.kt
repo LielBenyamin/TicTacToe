@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var player1Count = 0
     private var player2Count = 0
 
-    private var playerTurn = true // משתנה לזהות איזה שחקן בתור
+    private var playerTurn = true 
     private var activeUser = 1
     private val player1 = ArrayList<Int>()
     private val player2 = ArrayList<Int>()
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // הפונקציה שמטפלת בהקלקה על הלוח
+    
     fun clickfun(view: View) {
         if (playerTurn) {
             val button = view as Button
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // הפונקציה שמעדכנת את הלוח אחרי כל תור
+   
     fun playnow(buttonSelected: Button, currCell: Int) {
 
         if (activeUser == 1) {
@@ -94,13 +94,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // הפונקציה שמעדכנת את הציון של השחקנים
+ 
     private fun updateScore() {
         textView.text = "Player 1 : $player1Count"
         textView2.text = "Player 2 : $player2Count"
     }
 
-    // הפונקציה שבודקת אם יש מנצח
+    
     private fun checkWinner(): Int {
         val winningPositions = arrayOf(
             arrayOf(1, 2, 3), // שורה ראשונה
@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         return 0
     }
 
-    // פונקציה להחזרת התוצאה במקרה של תיקו
+   
     private fun checkDraw(): Boolean {
         return if (emptyCells.size == 9) {
             showMessage("It's a Draw!")
@@ -140,12 +140,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // פונקציה להצגת הודעה
     private fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    // הפונקציה שמאפסת את הלוח
     fun reset() {
         player1.clear()
         player2.clear()
