@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         textView = findViewById(R.id.textView)
         textView2 = findViewById(R.id.textView2)
 
-        // הגדרת כפתור reset
+        
         button10.setOnClickListener {
             restart()
         }
@@ -103,14 +103,14 @@ class MainActivity : AppCompatActivity() {
     
     private fun checkWinner(): Int {
         val winningPositions = arrayOf(
-            arrayOf(1, 2, 3), // שורה ראשונה
-            arrayOf(4, 5, 6), // שורה שנייה
-            arrayOf(7, 8, 9), // שורה שלישית
-            arrayOf(1, 4, 7), // עמודה ראשונה
-            arrayOf(2, 5, 8), // עמודה שנייה
-            arrayOf(3, 6, 9), // עמודה שלישית
-            arrayOf(1, 5, 9), // אלכסון ראשי
-            arrayOf(3, 5, 7)  // אלכסון משני
+            arrayOf(1, 2, 3), 
+            arrayOf(4, 5, 6), 
+            arrayOf(7, 8, 9), 
+            arrayOf(1, 4, 7), 
+            arrayOf(2, 5, 8), 
+            arrayOf(3, 6, 9), 
+            arrayOf(1, 5, 9), 
+            arrayOf(3, 5, 7)  
         )
 
         for (position in winningPositions) {
